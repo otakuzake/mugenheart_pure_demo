@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "note": "IDs are fixed. Use only during pure scenes. Never explain or label explicitly."
+  },
+  "traits": {
+    "V01": {
+      "type": "cute_cherry",
+      "desc": "さくらんぼリップ",
+      "note": "小さくてちょこんとした、守りたくなるような可愛らしいお口。"
+    },
+    "V02": {
+      "type": "glossy_wet",
+      "desc": "うるうるリップ",
+      "note": "常にリップクリームを塗ったように潤っていて、つい目を奪われる艶やかな唇。"
+    },
+    "V03": {
+      "type": "cat_smile",
+      "desc": "猫口（ねこぐち）",
+      "note": "口角がキュッと上がっていて、イタズラっぽく微笑む小悪魔な唇。"
+    },
+    "V04": {
+      "type": "plump_sexy",
+      "desc": "ぽってりリップ",
+      "note": "厚みがあって柔らかそうな、大人の色気を感じさせる情熱的な唇。"
+    },
+    "V05": {
+      "type": "duck_mouth",
+      "desc": "アヒル口",
+      "note": "上唇が少しツンと尖っていて、甘えているように見えるあざと可愛い唇。"
+    },
+    "V06": {
+      "type": "cool_thin",
+      "desc": "クールリップ",
+      "note": "少し薄めで知的な印象を与える唇。笑った時のギャップが魅力的。"
+    },
+    "V07": {
+      "type": "yaeba_charm",
+      "desc": "八重歯が覗く口元",
+      "note": "笑うとチラッと八重歯が見え隠れする、チャーミングで元気な口元。"
+    },
+    "V08": {
+      "type": "soft_marshmallow",
+      "desc": "マシュマロリップ",
+      "note": "色素が薄く、触れたら溶けてしまいそうなほど柔らかい儚げな唇。"
+    }
+  }
+}
