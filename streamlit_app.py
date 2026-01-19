@@ -358,8 +358,9 @@ if "gemini_client" not in st.session_state:
         st.session_state.gemini_client = GeminiClient(st.session_state.gemini_api_key)
     else:
         st.session_state.gemini_client = None
-if "comfy_client" not in st.session_state:
-    st.session_state.comfy_client = ComfyClient()
+# Web体験版: ComfyClientの初期化を削除
+# if "comfy_client" not in st.session_state:
+#     st.session_state.comfy_client = ComfyClient()
 
 # Skill State
 if "is_skill_active" not in st.session_state:
