@@ -114,7 +114,7 @@ defaults = {
     "age_verified": True,  # Web体験版では認証画面をスキップ
     "protagonist_set": False,
     "phase": "create",
-    "user_name": "ケイサク",
+    "user_name": "カズヤ",
     "user_age": "20",
     "world_mode": "現代",
     "world_detail": "",
@@ -4658,34 +4658,6 @@ def render_title_screen():
         st.session_state.title_bg_b64 = load_b64_image(bg_path)
     bg_b64 = st.session_state.title_bg_b64
 
-    # --- 1.5) Language selector on sidebar (title screen) ---
-    with st.sidebar:
-        st.header("🌐 Language / 言語")
-        lang_options_sidebar = {
-            "日本語 (Japanese)": "jp",
-            "English": "en",
-            "简体中文 (Simplified Chinese)": "zh-CN",
-            "繁體中文 (Traditional Chinese)": "zh-TW",
-        }
-        current_lang = st.session_state.get("language", "jp")
-        current_lang_key = next(
-            (k for k, v in lang_options_sidebar.items() if v == current_lang),
-            "日本語 (Japanese)",
-        )
-        selected_lang_key = st.selectbox(
-            "Language / 言語",
-            options=list(lang_options_sidebar.keys()),
-            index=list(lang_options_sidebar.keys()).index(current_lang_key)
-            if current_lang_key in lang_options_sidebar
-            else 0,
-            key="lang_select_box_title",
-        )
-        selected_lang = lang_options_sidebar[selected_lang_key]
-        if selected_lang != st.session_state.get("language"):
-            st.session_state.language = selected_lang
-            lang_mgr.load_data(selected_lang, "male_target")
-            st.rerun()
-
     # --- 2) Background & Glass CSS (DX版の完全コピー) ---
     st.markdown(f"""
     <style>
@@ -4772,7 +4744,7 @@ def render_title_screen():
         col1, col2 = st.columns([2, 1])
         with col1:
             t_lbl("プレイヤー名")
-            player_name = st.text_input("p_name", value=st.session_state.get("user_name", "あなた"), key="title_name", label_visibility="collapsed")
+            player_name = st.text_input("p_name", value=st.session_state.get("user_name", "カズヤ"), key="title_name", label_visibility="collapsed")
         with col2:
             t_lbl("年齢")
             player_age = st.number_input("p_age", min_value=18, max_value=99, value=int(st.session_state.get("user_age", 20)), key="title_age", label_visibility="collapsed")
