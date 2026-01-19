@@ -1900,26 +1900,11 @@ def game_start_dummy_if_needed():
             "speaker_name": "System"
         })
     
-    # Web体験版: セリフを別エントリとして追加
-    # Web体験版: intro_dialogueが抽出できない場合はデフォルト台詞を使用
-    if not intro_dialogue:
-        intro_dialogue = "……来たんだ。"
-    
-    # Web体験版: 常に台詞を表示
+    # Web体験版: セリフを別エントリとして追加（抽出された場合のみ）
+    # 導入文からヒロインのセリフが抽出された場合のみ追加
     if IS_DEMO_MODE and intro_dialogue:
         current_lang = st.session_state.get("language", "jp")
         h_name = st.session_state.chat_heroine.name if st.session_state.chat_heroine else "ヒロイン"
-        
-        # 多言語対応のデフォルト台詞
-        if current_lang == "en":
-            if intro_dialogue == "……来たんだ。":
-                intro_dialogue = "...You came."
-        elif current_lang == "zh-CN":
-            if intro_dialogue == "……来たんだ。":
-                intro_dialogue = "...你来了。"
-        elif current_lang == "zh-TW":
-            if intro_dialogue == "……来たんだ。":
-                intro_dialogue = "...你來了。"
         
         st.session_state.chat_history.append({
             "role": "model",
